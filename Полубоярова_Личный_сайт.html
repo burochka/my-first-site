@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Анастасия Полубоярова — Бизнес-аналитик</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root{--bg:#FFF8F2;--card:#FFFFFF;--border:#F3E1D7;--text:#382B37;--muted:#8B7A88;--grad1:#FF8FA3;--grad2:#FFC978;--grad3:#B69CDE}
+        html.dark{--bg:#221A2C;--card:#2C2237;--border:#453653;--text:#F2E6EF;--muted:#B7A6C3}
+        [data-sec=hobbies]{--grad1:#8FAE7A;--grad2:#E3B15A;--grad3:#4FA99A}
+        [data-sec=pets]{--grad1:#FF9E86;--grad2:#FFC97A;--grad3:#F2879E}
+        [data-sec=study]{--grad1:#7C93D9;--grad2:#B49CE0;--grad3:#E8C468}
+        *{transition:background-color .5s ease,border-color .5s ease,color .35s ease}
+        html{scroll-behavior:smooth}
+        body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--text)}
+        h1,h2,.dispf{font-family:'Unbounded',sans-serif}
+        .grad-text{background:linear-gradient(90deg,var(--grad1),var(--grad2),var(--grad3));-webkit-background-clip:text;background-clip:text;color:transparent}
+        .grad-card{background:linear-gradient(150deg,color-mix(in srgb,var(--grad1) 9%,var(--card)),color-mix(in srgb,var(--grad3) 7%,var(--card)))}
+        .grad-btn{background:linear-gradient(90deg,var(--grad1),var(--grad2))}
+        .blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.28;z-index:-10;pointer-events:none}
+        ::-webkit-scrollbar{height:6px;width:6px}
+        ::-webkit-scrollbar-thumb{background:var(--grad1);border-radius:9999px}
+        .no-sb{scrollbar-width:none}
+        .no-sb::-webkit-scrollbar{display:none}
+        .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+        .reveal.show{opacity:1;transform:none}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        .float{animation:float 5s ease-in-out infinite}
+        @keyframes arrowL{0%,100%{transform:translateX(0)}50%{transform:translateX(-5px)}}
+        @keyframes arrowR{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+        .arr-l svg{animation:arrowL 1.6s ease-in-out infinite}
+        .arr-r svg{animation:arrowR 1.6s ease-in-out infinite}
+        #lightbox{opacity:0;pointer-events:none;transition:opacity .25s ease}
+        #lightbox.show{opacity:1;pointer-events:auto}
+        #lightbox img{transform:scale(.94);transition:transform .25s ease}
+        #lightbox.show img{transform:scale(1)}
+        .sec-tab{transition:all .3s ease}
+        .sec-tab.active{background:linear-gradient(90deg,var(--grad1),var(--grad2));color:#fff;border-color:transparent}
+        .chip{transition:transform .2s ease}
+        .chip:hover{transform:translateY(-2px)}
+        @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+        .feather-icon{width:1.2em;height:1.2em;display:inline-block;vertical-align:middle;stroke-width:2;stroke:currentColor;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+</head>
+<body class="min-h-screen" id="body" data-sec="hobbies">
+<div class="blob w-72 h-72 -top-10 -left-10" style="background:var(--grad1)"></div>
+<div class="blob w-80 h-80 top-40 -right-16" style="background:var(--grad3)"></div>
+<div class="blob w-64 h-64 bottom-0 left-1/3" style="background:var(--grad2)"></div>
+
+<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[var(--card)]/75 border-b border-[var(--border)]">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#hero" class="dispf font-bold grad-text text-lg">АП</a>
+        <div class="hidden sm:flex gap-6 text-sm font-medium">
+            <a href="#pro" class="hover:opacity-60 transition-opacity">Резюме</a>
+            <a href="#personal" class="hover:opacity-60 transition-opacity">Обо мне</a>
+        </div>
+        <button onclick="toggleTheme()" id="themeBtn" class="w-9 h-9 rounded-full border border-[var(--border)] grid place-items-center bg-[var(--card)]">
+            <i data-feather="sun" class="feather-icon"></i>
+        </button>
+    </div>
+</nav>
+
+<section id="hero" class="min-h-screen flex items-center pt-24 pb-14 px-4">
+    <div class="max-w-5xl mx-auto w-full grid md:grid-cols-[220px_1fr] gap-10 items-center reveal">
+        <div class="mx-auto md:mx-0 w-40 h-40 md:w-full md:h-52 rounded-[2.5rem] p-1.5 grad-btn shadow-xl float">
+            <img src="https://sun9-76.vkuserphoto.ru/s/v1/ig2/Lan9e4ZlaDPNQ5YUKnDenfp92LM4iZOD7lTG9d7owZMTrCRR40bTk4it6zLVagrwFTamkkgywaqVDkl2sKI4WyMT.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=jWAlVxWo65hGX49YWexrKArURnPU6CFNoG1J0Q_LZK0&cs=1920x0" alt="Анастасия Полубоярова" class="w-full h-full object-cover rounded-[2.2rem]" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\'w-full h-full rounded-[2.2rem] bg-[var(--card)] grid place-items-center text-5xl font-light\'>А</div>'">
+        </div>
+        <div class="text-center md:text-left">
+            <p class="text-xs uppercase tracking-[.2em] text-[var(--muted)] font-semibold mb-1">Привет, я</p>
+            <h1 class="dispf text-3xl sm:text-4xl md:text-5xl font-bold grad-text leading-tight">Анастасия Полубоярова</h1>
+            <div class="flex flex-wrap justify-center md:justify-start gap-2 mt-3 text-xs sm:text-sm">
+                <span class="px-3 py-1 rounded-full grad-btn text-white font-medium chip">Начинающий бизнес-аналитик</span>
+                <span class="px-3 py-1 rounded-full border border-dashed border-[var(--grad3)] text-[var(--muted)]">
+                    <i data-feather="calendar" class="feather-icon mr-1"></i> 03.12.2003
+                </span>
+            </div>
+            <p class="mt-4 text-sm sm:text-base text-[var(--muted)] max-w-xl leading-relaxed">Начинающий бизнес-аналитик с дипломом с отличием и опытом полного цикла проекта — от финансовой диагностики до экономического обоснования внедрения ИТ-системы. Ищу позицию, где пригодятся моделирование, анализ требований и оценка эффективности в команде цифровой трансформации.</p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-2 mt-5 text-xs sm:text-sm">
+                <a href="tel:+79250512192" class="px-3 py-1.5 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[var(--grad1)] chip"><i data-feather="phone" class="feather-icon mr-1"></i> +7 (925) 051-21-92</a>
+                <a href="https://t.me/nika_burochka" target="_blank" class="px-3 py-1.5 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[var(--grad1)] chip"><i data-feather="send" class="feather-icon mr-1"></i> @nika_burochka</a>
+                <a href="mailto:neka153@yandex.ru" class="px-3 py-1.5 rounded-full border border-[var(--border)] bg-[var(--card)] hover:border-[var(--grad1)] chip"><i data-feather="mail" class="feather-icon mr-1"></i> neka153@yandex.ru</a>
+                <a href="https://drive.google.com/drive/folders/1MleNgE_DVTHgE6uWctDAfOlM9SQpmeFS" target="_blank" class="px-3 py-1.5 rounded-full grad-btn text-white font-medium chip"><i data-feather="folder" class="feather-icon mr-1"></i> Портфолио</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pro" class="py-16 px-4 max-w-5xl mx-auto scroll-mt-20">
+    <p class="text-xs uppercase tracking-[.2em] text-[var(--grad1)] font-semibold mb-1 reveal">Резюме</p>
+    <h2 class="dispf text-2xl sm:text-3xl font-bold mb-7 reveal">Как специалист</h2>
+
+    <div class="grid md:grid-cols-2 gap-4 reveal">
+        <div class="grad-card border border-[var(--border)] rounded-2xl p-5">
+            <h3 class="font-semibold mb-2 flex items-center gap-2"><i data-feather="book-open" class="feather-icon"></i> Образование</h3>
+            <p class="text-sm text-[var(--muted)] leading-relaxed">МИРЭА — бакалавр бизнес-информатики («Архитектура предприятия»), диплом с отличием, 2022–2026.</p>
+            <p class="text-sm text-[var(--muted)] mt-2 leading-relaxed">Доп.: Колледж полиции, «Секретарь суда» (120 ч, 2020).</p>
+        </div>
+        <div class="grad-card border border-[var(--border)] rounded-2xl p-5">
+            <h3 class="font-semibold mb-2 flex items-center gap-2"><i data-feather="globe" class="feather-icon"></i> Языки</h3>
+            <p class="text-sm text-[var(--muted)] leading-relaxed">Русский — родной.</p>
+            <p class="text-sm text-[var(--muted)] leading-relaxed">Английский (B2) — 6 лет перевожу и редактирую тексты.</p>
+        </div>
+    </div>
+
+    <h3 class="font-semibold mt-8 mb-3 reveal flex items-center gap-2"><i data-feather="settings" class="feather-icon"></i> Ключевые компетенции</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 reveal">
+        <div class="rounded-xl p-4 grad-card border border-[var(--border)] border-l-4" style="border-left-color:var(--grad1)"><p class="font-semibold text-sm">Анализ и моделирование процессов</p><p class="text-xs text-[var(--muted)] mt-1">BPMN 2.0 (AS-IS/TO-BE), Bizagi Modeler, Draw.io</p></div>
+        <div class="rounded-xl p-4 grad-card border border-[var(--border)] border-l-4" style="border-left-color:var(--grad2)"><p class="font-semibold text-sm">Сбор и документирование требований</p><p class="text-xs text-[var(--muted)] mt-1">User Stories, ТЗ, опросные листы, прототипирование</p></div>
+        <div class="rounded-xl p-4 grad-card border border-[var(--border)] border-l-4" style="border-left-color:var(--grad3)"><p class="font-semibold text-sm">Экономическое обоснование ИТ</p><p class="text-xs text-[var(--muted)] mt-1">CAPEX, OPEX, TCO, ROI, срок окупаемости, «что если»</p></div>
+        <div class="rounded-xl p-4 grad-card border border-[var(--border)] border-l-4" style="border-left-color:var(--grad1)"><p class="font-semibold text-sm">Проектное управление</p><p class="text-xs text-[var(--muted)] mt-1">Гант (MS Project), RACI, Agile/Scrum, каскадная модель</p></div>
+        <div class="rounded-xl p-4 grad-card border border-[var(--border)] border-l-4" style="border-left-color:var(--grad2)"><p class="font-semibold text-sm">Стратегический анализ</p><p class="text-xs text-[var(--muted)] mt-1">SWOT, PESTEL, метод взвешенных оценок</p></div>
+        <div class="rounded-xl p-4 grad-card border border-[var(--border)] border-l-4" style="border-left-color:var(--grad3)"><p class="font-semibold text-sm">Визуальное моделирование архитектуры</p><p class="text-xs text-[var(--muted)] mt-1">Базовый UML, архитектурные диаграммы</p></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-8 reveal">
+        <div class="grad-card border border-[var(--border)] rounded-2xl p-5">
+            <h3 class="font-semibold mb-3 flex items-center gap-2"><i data-feather="tool" class="feather-icon"></i> Инструменты</h3>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+                <div><p class="text-xs font-semibold uppercase tracking-wide" style="color:var(--grad1)">Моделирование</p><p class="text-[var(--muted)]">Bizagi Modeler, Draw.io, Miro</p></div>
+                <div><p class="text-xs font-semibold uppercase tracking-wide" style="color:var(--grad2)">Проекты</p><p class="text-[var(--muted)]">Microsoft Project</p></div>
+                <div><p class="text-xs font-semibold uppercase tracking-wide" style="color:var(--grad3)">Офис</p><p class="text-[var(--muted)]">MS Office, Google Docs, Canva</p></div>
+                <div><p class="text-xs font-semibold uppercase tracking-wide" style="color:var(--grad1)">Базово</p><p class="text-[var(--muted)]">1С:Документооборот, AnyLogic</p></div>
+            </div>
+        </div>
+        <div class="grad-card border border-[var(--border)] rounded-2xl p-5">
+            <h3 class="font-semibold mb-2 flex items-center gap-2"><i data-feather="star" class="feather-icon"></i> Дополнительно</h3>
+            <p class="text-sm text-[var(--muted)] leading-relaxed mb-3">2 научные статьи — автоматизация бизнес-процессов и корпоративная память (0,34 а.л.)</p>
+            <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs px-2.5 py-1 rounded-full bg-[var(--bg)] border border-[var(--border)] chip">чувствую смысловые нестыковки</span>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-[var(--bg)] border border-[var(--border)] chip">выстраиваю единое терминологическое поле</span>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-[var(--bg)] border border-[var(--border)] chip">вскрываю скрытые требования</span>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-[var(--bg)] border border-[var(--border)] chip">смотрю глазами разных аудиторий</span>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-[var(--bg)] border border-[var(--border)] chip">высокая наблюдательность</span>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-[var(--bg)] border border-[var(--border)] chip">быстро вникаю в новую область</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="personal" class="py-16 px-4 max-w-5xl mx-auto scroll-mt-20">
+    <p class="text-xs uppercase tracking-[.2em] text-[var(--grad1)] font-semibold mb-1 reveal">Личное</p>
+    <h2 class="dispf text-2xl sm:text-3xl font-bold mb-1 reveal">Другие грани</h2>
+    <p class="text-sm text-[var(--muted)] mb-6 reveal">то, что не поместилось бы в резюме, но многое обо мне объясняет</p>
+
+    <div class="flex flex-wrap gap-2 mb-8 reveal">
+        <button class="sec-tab active px-4 py-2 rounded-full text-sm font-medium border border-[var(--border)] bg-[var(--card)]" data-sec="hobbies" onclick="setSec('hobbies')"><i data-feather="heart" class="feather-icon mr-1"></i> Увлечения</button>
+        <button class="sec-tab px-4 py-2 rounded-full text-sm font-medium border border-[var(--border)] bg-[var(--card)]" data-sec="pets" onclick="setSec('pets')"><i data-feather="github" class="feather-icon mr-1"></i> Питомцы</button>
+        <button class="sec-tab px-4 py-2 rounded-full text-sm font-medium border border-[var(--border)] bg-[var(--card)]" data-sec="study" onclick="setSec('study')"><i data-feather="book-open" class="feather-icon mr-1"></i> Учёба</button>
+    </div>
+
+    <div class="sec-panel reveal show" data-sec="hobbies" id="panel-hobbies">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="grad-card border border-[var(--border)] rounded-2xl p-4 chip"><i data-feather="film" class="feather-icon mb-1"></i><p class="font-semibold text-sm mb-1">Монтаж</p><p class="text-xs text-[var(--muted)] leading-snug">Только начинаю осваивать — собираю плейлисты на YouTube и учусь на ходу.</p></div>
+            <div class="grad-card border border-[var(--border)] rounded-2xl p-4 chip"><i data-feather="edit-3" class="feather-icon mb-1"></i><p class="font-semibold text-sm mb-1">Писательство</p><p class="text-xs text-[var(--muted)] leading-snug">6 лет назад стала редактором, чтобы однажды выпустить свою книгу и не отдавать голос текста никому — редактор для меня партнёр, а не совладелец. 5 лет назад начала переводить, чтобы потом перевести и свою книгу на английский.</p></div>
+            <div class="grad-card border border-[var(--border)] rounded-2xl p-4 chip"><i data-feather="camera" class="feather-icon mb-1"></i><p class="font-semibold text-sm mb-1">Декор пространства</p><p class="text-xs text-[var(--muted)] leading-snug">Обвешиваю всё вокруг гирляндами, фото и рисунками. Одежда — на напольной вешалке: и часть интерьера, и способ не терять вещи. Даже украшения висят так, чтобы вписывались и легко находились.</p></div>
+            <div class="grad-card border border-[var(--border)] rounded-2xl p-4 chip"><i data-feather="grid" class="feather-icon mb-1"></i><p class="font-semibold text-sm mb-1">Настольные игры</p><p class="text-xs text-[var(--muted)] leading-snug">Долго была лишена этого хобби — окружение его не разделяло. Недавно нашла компанию, с которой собираемся почти каждые выходные.</p></div>
+            <div class="grad-card border border-[var(--border)] rounded-2xl p-4 chip"><i data-feather="cloud" class="feather-icon mb-1"></i><p class="font-semibold text-sm mb-1">Лес и велосипед</p><p class="text-xs text-[var(--muted)] leading-snug">Живу у Битцевского леса и знаю его вдоль и поперёк — хорошо ориентируюсь, люблю природу и часто катаюсь там на велосипеде.</p></div>
+            <div class="grad-card border border-[var(--border)] rounded-2xl p-4 chip"><i data-feather="scissors" class="feather-icon mb-1"></i><p class="font-semibold text-sm mb-1">Рукоделие</p><p class="text-xs text-[var(--muted)] leading-snug">Вязала, шила и вышивала — и нитками, и бисером.</p></div>
+            <div class="grad-card border border-[var(--border)] rounded-2xl p-4 chip"><i data-feather="sun" class="feather-icon mb-1"></i><p class="font-semibold text-sm mb-1">Ногти</p><p class="text-xs text-[var(--muted)] leading-snug">Сама наращиваю ногти. Часто делаю это подругам.</p></div>
+            <div class="grad-card border border-[var(--border)] rounded-2xl p-4 chip"><i data-feather="box" class="feather-icon mb-1"></i><p class="font-semibold text-sm mb-1">Террариумистика</p><p class="text-xs text-[var(--muted)] leading-snug">Самое свежее увлечение — гекконы, рынок и сообщество вокруг них. Подробнее и с фото ниже ↓</p></div>
+        </div>
+
+        <div class="mt-10 space-y-10">
+            <div>
+                <h4 class="font-semibold mb-1 flex items-center gap-2"><i data-feather="box" class="feather-icon"></i> Террариумистика</h4>
+                <p class="text-sm text-[var(--muted)] max-w-2xl leading-relaxed mb-4">Взахлёб изучаю гекконов, слежу за рынком и сообществом террариумистики, его спорами и открытиями. Самый грустный факт этого мира: люди умудрились сыграть в бога даже здесь — существуют морфы эублефара (лемон фрост, энигма) с наследственными заболеваниями, выведенные ради «модного» окраса и передающие рак и болезни нервной системы потомству.</p>
+                <div class="relative">
+                    <div id="car-terra" class="flex gap-3 overflow-x-auto no-sb snap-x snap-mandatory scroll-smooth pb-2"></div>
+                    <button onclick="scrollCar('car-terra',-1)" class="arr-l hidden sm:grid place-items-center absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+                    <button onclick="scrollCar('car-terra',1)" class="arr-r hidden sm:grid place-items-center absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-semibold mb-1 flex items-center gap-2"><i data-feather="map" class="feather-icon"></i> Прогулки</h4>
+                <p class="text-sm text-[var(--muted)] max-w-2xl leading-relaxed mb-4">Люблю гулять там, где не ловит интернет и нет связи — вдали от цивилизации, где течёт совсем другая жизнь.</p>
+                <div class="relative">
+                    <div id="car-walks" class="flex gap-3 overflow-x-auto no-sb snap-x snap-mandatory scroll-smooth pb-2"></div>
+                    <button onclick="scrollCar('car-walks',-1)" class="arr-l hidden sm:grid place-items-center absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+                    <button onclick="scrollCar('car-walks',1)" class="arr-r hidden sm:grid place-items-center absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-semibold mb-1 flex items-center gap-2"><i data-feather="image" class="feather-icon"></i> Рисование</h4>
+                <p class="text-sm text-[var(--muted)] max-w-2xl leading-relaxed mb-4">Раньше много рисовала в диджитал-формате и продавала коммишки — в школе всегда была тем самым человеком, который рисует для любого мероприятия.</p>
+                <div class="relative">
+                    <div id="car-draw" class="flex gap-3 overflow-x-auto no-sb snap-x snap-mandatory scroll-smooth pb-2"></div>
+                    <button onclick="scrollCar('car-draw',-1)" class="arr-l hidden sm:grid place-items-center absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+                    <button onclick="scrollCar('car-draw',1)" class="arr-r hidden sm:grid place-items-center absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sec-panel hidden" data-sec="pets" id="panel-pets">
+        <p class="text-sm text-[var(--muted)] max-w-2xl leading-relaxed mb-4">Пятеро эублефаров и три кошки — почти все спасены из тяжёлых обстоятельств. Листайте вбок, у каждого своя история.</p>
+        <div class="relative">
+            <div id="car-pets" class="flex gap-3 overflow-x-auto no-sb snap-x snap-mandatory scroll-smooth pb-2"></div>
+            <button onclick="scrollCar('car-pets',-1)" class="arr-l hidden sm:grid place-items-center absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button onclick="scrollCar('car-pets',1)" class="arr-r hidden sm:grid place-items-center absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+    </div>
+
+    <div class="sec-panel hidden" data-sec="study" id="panel-study">
+        <p class="text-sm text-[var(--muted)] max-w-2xl leading-relaxed mb-4">Пять лет в МИРЭА — это не только цифры в дипломе с отличием. Это годы, где системный анализ бизнес-процессов уживался с вечными поисками себя: редактурой, переводами, гекконами и лесными прогулками между парами. Учёба научила смотреть на любую систему — хоть в компании, хоть в жизни — и находить в ней логику, даже когда логики, кажется, никакой нет.</p>
+        <div class="relative">
+            <div id="car-study" class="flex gap-3 overflow-x-auto no-sb snap-x snap-mandatory scroll-smooth pb-2"></div>
+            <button onclick="scrollCar('car-study',-1)" class="arr-l hidden sm:grid place-items-center absolute -left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button onclick="scrollCar('car-study',1)" class="arr-r hidden sm:grid place-items-center absolute -right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--card)]/90 border border-[var(--border)] shadow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-8 text-xs text-[var(--muted)] border-t border-[var(--border)]">
+    <p>© 2026 Анастасия Полубоярова</p>
+    <p class="mt-1">Сделано с заботой о деталях 💜</p>
+</footer>
+
+<div id="lightbox" class="hidden fixed inset-0 z-[60] bg-black/85 backdrop-blur-sm flex items-center justify-center p-4" onclick="if(event.target===this)closeLB()">
+    <button onclick="closeLB()" class="absolute top-4 right-4 text-white text-xl w-10 h-10 rounded-full bg-white/10">✕</button>
+    <div class="max-w-2xl w-full">
+        <img id="lbImg" class="w-full max-h-[75vh] object-contain rounded-xl" src="" alt="">
+        <p id="lbCap" class="text-white/90 text-sm text-center mt-3"></p>
+    </div>
+</div>
+
+<script>
+    const DATA = {
+        terra: [
+            {photos:[{src:'https://sun9-16.vkuserphoto.ru/s/v1/ig2/e7oJEZG-NgWXnhGiuvhqpdw8NM7Jy3tzJA9I2E7H2pYrSjuGj6x_3tB8NZH6L6ixblD_P4Bbat3uXM73_nNj3ClV.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0', cap:'Биоактивный террариум для бананоеда — полностью сделан своими руками: грунт замешан вручную из трёх компонентов, на стенках распиленный песчаник, а растения ещё и безопасны для геккона.'}]},
+            {photos:[{src:'https://sun9-51.vkuserphoto.ru/s/v1/ig2/RFmmLEjAVyPLKCwdblhWeF9yGja-nDrhXTXIFudzNNO5CtvS4WiDQ6G70TYDYkTyeEWn5afV7T-POqul_m4W8yxW.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0', cap:'Мой первый террариум с нуля — 60×45×45, для детёныша эублефара.'}]},
+            {photos:[
+                {src:'https://sun9-5.vkuserphoto.ru/s/v1/ig2/hpOFuGIXxvSHolCf7tfarcgRi5w4QplbOUCOuVFjaqhhtweRcNWHxqulNO-gfxmQeQzwJmIUugjVF6ibBncNdwAj.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'},
+                {src:'https://sun9-53.vkuserphoto.ru/s/v1/ig2/Vx9WKK3fv8dPls1NkCIJQ3SyzB9q9fI_wsTz7UhlFonThBP84lxZx6I_OdooZKlNSM1WuID37L0gC-ojSnUNXIAU.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'},
+                {src:'https://sun9-18.vkuserphoto.ru/s/v1/ig2/d5mK8VuDIt8NoXJoesZf6RJVmc7FAgjXSDsvDDZGwIcrvG1BuiqRePpwgpDZmlOLUKivsExOE6KYr7rLJI9FlL02.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'}
+            ], groupCap:'Террариум 90×45×45 для двух самок эублефаров — тоже полностью моя работа.'}
+        ],
+        walks: [
+            {photos:[{src:'https://sun9-7.vkuserphoto.ru/s/v1/ig2/OR7YsmGHoADX9EyardBv5-yyH5lI7CKsVM6Q0e2V4jRjv75a9Nbvy4bENQvxh6_PBloyoKXLDVt-I1AOJJYGI3dz.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=spudexiq8XtAHyTXEhee9mZKdj37lMRVKAp8awrGPN4&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-23.vkuserphoto.ru/s/v1/ig2/62wN18gAKq4Rzr2aFUNnVyhW7Cq0wIoIVLGGdCHMxUjGpHBwG9nJT1gMSEFimrAmGjP8S3ZzlkGfawBmJoIaMv6b.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920&from=bu&cs=1440x0'}]},
+            {photos:[{src:'https://sun9-11.vkuserphoto.ru/s/v1/ig2/u0tY-220LemtnE7e3lGmygFONZwZWXMX55gbsZHkuP7U8lDXHQLpNz6oadkIADNIe8H2ssJex-bZgkmlPZ_JL6kL.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-31.vkuserphoto.ru/s/v1/ig2/M53aIVHfvtbmi8bvOidRT5pAktOXbNHaP-fhwzaF2igB7Jrz6C3qojiaMwztThVgcuyVEmoLSDOhhRNHX_GTzV81.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-64.vkuserphoto.ru/s/v1/ig2/fY_0vWRGohOFZJr_6FyCYRBEXq1TH1uMWK8v5T3Tg46UrbwEgAdiKcs_ejknvKJ-da0S36D51awdpiZM0xXLThhY.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-44.vkuserphoto.ru/s/v1/ig2/tyfozKS5cbfwKw_HPVOJa_tHNHO9XeM2-yuwEHWuhW9V_H0tf9IT8Q0a8B6iquGtiN2lMXteJe9sm1a_yqK_XoLG.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-79.vkuserphoto.ru/s/v1/ig2/5EYgY9lgq80eElVw6oEjo6F-sGO8004YMiBuDOYFpzuyG3PBQcgpWKoTUM40MKeq0e1ZlGEN50f71N09u9A2DUqb.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=rFtwwUlkAwfcQwie7wuokiAbrpfeJs2gFiHM2GojAjA&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-78.vkuserphoto.ru/s/v1/ig2/_P5wrATEOYSdAMriX-x3ojOQd_yXb_SKXAbSlTNqJ-PECRbJCCvVmJOdFaOLogun0XbiA7LLeYvnGKrzhmSnkV04.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-69.vkuserphoto.ru/s/v1/ig2/gLVGBBAN9pNFUPgMH7kqxLsHw055KhFygMR-fmHg7N_W7Q7cj65KwYSUvkfvVuvwK1kLzdeiOpaIl3murtEz5IIu.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0'}]},
+            {photos:[{src:'https://sun9-43.vkuserphoto.ru/s/v1/ig2/cZtsR5TPoj0Bp57mnwsHR2JOMAe_DbAoFXaRzp99C_xK3mg7ZwzXs0j1yXU2g7QbCs7rpUIIcXTB8R7sJlxrTyhv.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0'}]},
+            {photos:[{src:'https://sun9-40.vkuserphoto.ru/s/v1/ig2/i6BxgS2BP5hqydYiYEvhLQhu9N4IYUUhkhZh_ttfTeMBzlBi1wnS5MSUxgXqeGng7Wov0OQ7mW0KfjrZZReW29Yo.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0'}]},
+            {photos:[{src:'https://sun9-32.vkuserphoto.ru/s/v1/ig2/CwRadw1c8ZMprnMIWHgIj22lbni7ByeDp4LH7UDyP9QGQVDzqyylXlms1wrYTEOAfmr85n6RLsNB-Uvi7mKDeZEJ.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=sHd0HKOeAm0tLKYTPTA6WXNKw9800sv8REoG8tePpiA&cs=1920x0'}]},
+            {photos:[{src:'https://sun9-28.vkuserphoto.ru/s/v1/ig2/xyOy2K3mN4KWTuOH5JNR8XOcImH8gc5DH-QDbU-ac0JKdCWBz_ktDuQao-VxRkznjYKpP7AawJrFCwLXqbILswg_.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=w-50B_EzxSxSKaPhLzQxPoUvGt3Ebm2UzUJqS1LNrkk&cs=1920x0'}]},
+            {photos:[{src:'https://sun9-84.vkuserphoto.ru/s/v1/ig2/n4TqrCmEXWOG8RNt7brPIoMIbLWApEPCgBSZPaO-FF-Hm0gslzNEle0ZZPJwqQwZlER7Dn8_WlQd9GoDdfiakLtG.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=XrKv18hhJBw8H-7gnZyMyOJWT4wXvm62mWZgpgRdFNw&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-18.vkuserphoto.ru/s/v1/ig2/AEXVfetJCvsals1ftlC0BccPuEWhK9i0o5W5y5cR3ANu9KrBXs0-QmMjlEWnEBySkfj8P1FOCY5TwcqAGZKyt8Cj.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=_r4wHSBbZxWRmQ3FAOrORDj89l4cC51ayawuGabz6uo&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-25.vkuserphoto.ru/s/v1/ig2/Ivg7oHkgHDq92uuvz-C3GQHhjBmEFVOyp1OwFrAr1xbjawNSS_UNV9M7uKVxMUkm307ZjMZ0MpFWgGPH6uVkAwxG.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-40.vkuserphoto.ru/s/v1/ig2/o3fL_TMbimEx6qRoUG6_zc3lXhPDAZvkiI5MPTP90sXKd8dMV8Oc1ZP-EkcAfehhVD3VbkkWNQRyc44c-mhFoOHv.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0'}]},
+            {photos:[{src:'https://sun9-78.vkuserphoto.ru/s/v1/ig2/xJDSTPwqMLqy9z6ouExWHCKSCpAk_GyyLEAbpLejpc3QKqmLJ0abZFushB3KraH4L_IJtC_xtH2HL3sYAeIYgPyM.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=2tnbhDVBFJdlBq9dVA2ctENi8c7vhhxx86V5lp-TteA&cs=1920x0'}]},
+            {photos:[{src:'https://sun9-73.vkuserphoto.ru/s/v1/ig2/HQ9STmZpijmQ9fncCTG7HWlIDyyMLISHtQlyIt4oRr9gxwU6vuyHvNCL-XYJY00VfmRueeuvmW96qjXElKgSuP7f.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x639,540x719,640x853,720x959,1080x1439,1201x1600&from=bu&u=KXZMCUqaw-75YCURmMP39_H72LPmG9bucvotd6c8cO8&cs=1201x0'}]},
+            {photos:[{src:'https://sun9-73.vkuserphoto.ru/s/v1/ig2/f6s_lk1CopAUCeuRt-XMGeXDphFdUNsk5lr-KrLJ6Pqd5KNih3X2EEJrARCuMlg1kLBmohqGLyo4wvdTp4LQK85-.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0'}]},
+            {photos:[{src:'https://sun9-15.vkuserphoto.ru/s/v1/ig2/oR_XC-szUWjJEnSyvegzIV9sZM9BcLHZdm1njLbD0p8ojuA0bVjCfIRlRzzSsV_lqOq8VtZxD0Wvz934lJeXDkcG.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920&from=bu&cs=1440x0'}]}
+        ],
+        draw: [
+            {photos:[{src:'https://sun9-48.vkuserphoto.ru/s/v1/ig2/m44si37sTd5PFhPZXxwemBeyprTMcBLWfhMSwFEQHhvwYnvZ1Jy_6tgc3NfPte81AdtVUZ0WsUlmskUd5UbHBlQ3.jpg?quality=95&as=32x34,48x51,72x77,108x116,160x171,240x257,360x385,480x514,540x578,640x685,720x771,1080x1156,1196x1280&from=bu&u=McRPAmSU_17cUjGPvSfM1oflVoHYCVR6xlRj1Dw0qBQ&cs=1196x0'}]},
+            {photos:[{src:'https://sun9-66.vkuserphoto.ru/s/v1/ig2/fcSJ1wm7IdHSCjM56POBSnHENKhczbfVkQzJGKPRk9T2rrGcOO2VGqEFeVh8-c4PEvFozVfNmk6JKFBJKLqJ9dis.jpg?quality=95&as=32x45,48x68,72x102,108x153,160x227,240x341,360x511,480x681,540x766,640x908,720x1022,1080x1533,1280x1816,1440x2043,1804x2560&from=bu&cs=1804x0'}]},
+            {photos:[{src:'https://sun9-77.vkuserphoto.ru/s/v1/ig2/qgl_36hOm2mzKeFc4wSoJ4cLQsoTdG0I-agtUQCygL_1YmPKvpbxKFWKkcsA276ZJ0S_hwvRJLBfZDBAdxCzojci.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&from=bu&u=u9RXc2RSipD805yg__nsJu1XKFx7hSqA947IMUcDHmQ&cs=720x0'}]},
+            {photos:[{src:'https://sun9-78.vkuserphoto.ru/s/v1/ig2/GNjaY4vhqr4gY_KH3-M-P4M9yvLt_NFIqB_hqt6C7LQ5-uRYuYHdqzpYIYTnyEk8aVVMxr5wb2fLducN9Jsi6Y76.jpg?quality=95&as=32x54,48x82,72x122,108x184,160x272,240x408,360x612,480x816,540x918,640x1088,720x1224,753x1280&from=bu&u=uhy2oICy1U551yJxlTlvStNJVFsPkbbHnDv8FICSaic&cs=753x0'}]},
+            {photos:[{src:'https://sun9-85.vkuserphoto.ru/s/v1/ig2/SUHNmGMalO3AhCc4EpS75ZQWrQHRnUtVVAhvH-neEIHLf-N_HO46BAZv31HZchRuywHRVv6AMrbtLAcXgfg9CQRc.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1000x1000&from=bu&u=cV5iFl0oMJEqMnvKLDlCXqcjVblCMJxgqxXYupYiCtI&cs=1000x0'}]},
+            {photos:[{src:'https://sun9-54.vkuserphoto.ru/s/v1/ig2/OjRKksYDFLiEzv1OscKUH7HC5TbcyAFGMAqnrUbCkJ8_QNgmc_tnC2aAMQ92IAXvA9h7-B2XFCEeMagGS615P-6-.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x360,360x540,480x720,540x810,640x960,720x1080,853x1280&from=bu&u=2qudrXEYRRmvTKrltqknOQhbluTxig9xvPAxEITBnzg&cs=853x0'}]},
+            {photos:[{src:'https://sun9-73.vkuserphoto.ru/s/v1/ig2/ypwBhQdTCRmyGEv1KVXlEFSu5TFT8bQnE2E2zZKlD-fXXb-KIPh8EsxJxvs-CbuQsDJu6avunC-DnDb5QhnDpzTM.jpg?quality=95&as=32x34,48x51,72x77,108x116,160x171,240x257,360x385,480x514,540x578,640x685,720x771,1080x1156,1280x1370,1440x1542,1700x1820&from=bu&u=XkfIm9C7rKn95QpLVLnkFNcDxIOLtsPjIef4endE40A&cs=1700x0'}]}
+        ],
+        pets: [
+            {top:'Мои кошки', photos:[
+                {src:'https://sun9-11.vkuserphoto.ru/s/v1/ig2/a9CCyG_MdLzwIxd8heaIvdR49s4DT0hMdRtEhZmvXEsfNWpSh1OWbm1b3-hAESiLtcsnQWbpfkbhjr2i-fOo0HXy.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0', cap:'Это Пушинка. Она поняла эту жизнь.'},
+                {src:'https://sun9-50.vkuserphoto.ru/s/v1/ig2/BvCGt2e45dQl-peB1roP2X5vGvHYq7Hh_ytk4qXU9DLRv_I01nhfpFXwSKGPtfg1Qx_1xTbphy47KktuthhtkhQG.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&cs=2560x0', cap:'Это Бармаглот (Малыш). Он глупенький и неловкий.'},
+                {src:'https://sun9-72.vkuserphoto.ru/s/v1/ig2/KHd3ryM3PBQeT4xJ1M9nTcHWP9nQRf37I7I2XmGqoKu4GXmvL0suDujvQLNvzhJSaIBkMJMw1148MisVBCFsi6TB.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=qCArunvvMcquK28QUuxIdo3ppbIK8dQidAGZH45MgbY&cs=640x0', cap:'Это Брауни. Её достали из мусорки. Через две недели домашней жизни она отказывается есть корм с курицей или индейкой — любит только говяжье сердце. Но если корм с говяжьим сердцем полежит 10 минут, она всё равно его заскребёт.'}
+            ]},
+            {top:'Ася (Ассимиляция)', photos:[
+                {src:'https://sun9-64.vkuserphoto.ru/s/v1/ig2/DtW2Zu7hBvzZPOvTJq2DaDCjqQr5q_wt8-qu0x_WA2bPLkZsZpW1Up7ZiO_SJ1AY3ij6axPYJd3UoO53BSkVPdFB.jpg?quality=95&as=32x57,48x85,72x128,108x192,160x284,240x427,360x640,480x853,540x960,640x1138,720x1280,1080x1920&from=bu&cs=1080x0', cap:'22 июня 2026 г. Ася истощена и только спасена из жестокого разведения.'},
+                {src:'https://sun9-83.vkuserphoto.ru/s/v1/ig2/DpsCF--HaFgR-f3o5lJKviWRRuRQWSuWcl-oT0CoYHD68GSiVy22ZChilv1YLveTFtA_k7H8GDU-CAntBf0Qu4Sy.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0', cap:'Ася когда — всегда.'},
+                {src:'https://sun9-63.vkuserphoto.ru/s/v1/ig2/LZOg_eG6M1JY-CDwAke3i7IYwrsU4CnmIA057dZsQooTgDxdcNpt6RfJZkN8VrowQHHIJ2FmWlus-a0UfwvloIWe.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0', cap:'Ася 2 августа 2026 г.'}
+            ]},
+            {top:'Акка (Аккомодация)', photos:[
+                {src:'https://sun9-59.vkuserphoto.ru/s/v1/ig2/MxlQA2Mvnw8l4gGfe2nmVuG1Gr-hNapPKYDkAnCwTM-GibKhFN_Rgfmd4CmPcWDMEmeQrqENPnmo-KCiOa5bJP_Y.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x359,540x404,640x479,720x539,1003x751&from=bu&u=0sToIwWbTJFmmn6pz9sT7snZeuIrPFEWwEeqDAM-9U8&cs=1003x0', cap:'22 июня 2026 г. Акка травмирована, истощена и только спасена из жестокого разведения.'},
+                {src:'https://sun9-13.vkuserphoto.ru/s/v1/ig2/3mJNq0GJNRYcN8R9Tu-NaqQKnuzR48j-rbCOydYJw4sHfnvMRCgmgb45GQQ7R02sNgWi8HBe8BP_wKcPLnTESMXp.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0', cap:'Акка на 5 июля.'}
+            ]},
+            {top:'Это Оз. Он был единственным запланированным ребёнком.', photos:[
+                {src:'https://sun9-83.vkuserphoto.ru/s/v1/ig2/QRxJ3ozKqKEBhIoSimz2UPvA90eI4zVRE35eXB_z_G9AmhzfARayxJEj-2G2Lv1k6bQt5kAi06BNK8lkB1Y321mC.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=-NgpIIfYyrF1oUfriaYvS8HCRm3_0arxX5Iqs5huhdc&cs=1920x0', cap:'Оз — китаец среди эублефаров (во всех смыслах: его родители привезены из Китая).'},
+                {src:'https://sun9-57.vkuserphoto.ru/s/v1/ig2/HGbJfi5cTx7dOEP4jlS37VdKC0Prb7JJmKdLp-ptqbnKBipPlUtgqIkH1CGGG6s-O61IduLb6dUqSVSebsFeexs-.jpg?quality=95&as=32x57,48x85,72x128,108x192,160x284,240x427,360x640,480x853,540x960,640x1138,720x1280,1080x1920&from=bu&cs=1080x0', cap:'Оз любит кушать и больше ничего.'}
+            ]},
+            {top:'Это Мурр. У него нет век, и он спит с открытыми глазами. Поэтому, смотря в его круглые блестящие глаза, вы никогда не узнаете, видит он вас или сны. Мурр мальчик. А может, и нет.', photos:[
+                {src:'https://sun9-52.vkuserphoto.ru/s/v1/ig2/twR2w64p2nbqAyymC7yfrIK2QH-CVMpgjM6GeKM4i_RTGI_Q98Qg9jRJlOjy6YDxu8_CaquQjs50NQkrC3M9Mv5e.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0', cap:'Здесь он спит. Или нет.'},
+                {src:'https://sun9-16.vkuserphoto.ru/s/v1/ig2/e7oJEZG-NgWXnhGiuvhqpdw8NM7Jy3tzJA9I2E7H2pYrSjuGj6x_3tB8NZH6L6ixblD_P4Bbat3uXM73_nNj3ClV.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0', cap:'Этот росток вышел из сухой лианы и так разросся за три дня. Возможно, он скоро выселит Мурра.'}
+            ]}
+        ],
+        study: [
+            // Первый слайд «Студенческие годы» теперь содержит 5 фото (3 старых + 2 новых)
+            {photos:[
+                {src:'https://sun9-63.vkuserphoto.ru/s/v1/ig2/aR6yoE8400b1Y75umCkOtQhyAXiu8fhWXsF5ti8MCrVPE2bOfKnYefoIFtSTcpTiGzAFXG6UdKlvRYEc33qHdqaR.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0'},
+                {src:'https://sun9-87.vkuserphoto.ru/s/v1/ig2/YYpzuLu76uioi6_CegVVsJkU9zZFFRBGeE0I26osyywqaEByJKeJ0tRUqC3rD3T8WgKAF9059FHHS6SavGlU70aR.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0'},
+                {src:'https://sun9-36.vkuserphoto.ru/s/v1/ig2/am7NfWNAnOixqMHvk9jNeUH1K3f23q_BjSLLwYJRuJKNaLHkWeVe9NjbeF_GY3i9LyAjY9rhuPdlI4ur13qTOba6.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0'},
+                {src:'https://sun9-43.vkuserphoto.ru/s/v1/ig2/WnB5xOj9yL3-UCeKCm8c8thMgKzIg97zbRSpariAvVeR1j0PPUFWzId3uM9VmzqvhbTgW1kN47bM7JsvAVWEF_Hz.jpg?quality=95&as=32x26,48x39,72x59,108x89,160x131,240x197,360x296,480x394,540x444,640x526,720x591,1080x887,1280x1051,1440x1183,2560x2103&from=bu&cs=2560x0'},
+                {src:'https://sun9-81.vkuserphoto.ru/s/v1/ig2/eIL64Jecquh3FeUkqcren-80_PS3cTjKho5bYR5fVmCDALyruzXk1HUJE0UgEQXALVH9-5qEhfwMssNZfs31vzb-.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920&from=bu&cs=1440x0'}
+            ], groupCap:'Студенческие годы'},
+            // Второй слайд «Вручение дипломов» остаётся без изменений
+            {photos:[
+                {src:'https://sun9-39.vkuserphoto.ru/s/v1/ig2/IVEA5wyG3dudsHsiMy4cnt28vSuq96TSs-61ZyZm3ZdbEhbYfVjY-40tk_Xvhz62v9VrcbzA8rZCuC8DTdbCYTUe.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960&from=bu&cs=1280x0'},
+                {src:'https://sun9-78.vkuserphoto.ru/s/v1/ig2/dyPgwqFcPru2kuw724kU_aHGDxAkV6n1te_mDhcSRofY4KHS7pDeayCJcqcAWpEG_5DssojicZ1s8ZJqLZDvF8hl.jpg?quality=95&crop=0,0,1920,2560&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=5ZIWI-b-Layx5SfaZsD0WGf4_PvS2nF51hTqXkWJacQ&cs=1920x0'},
+                {src:'https://sun9-29.vkuserphoto.ru/s/v1/ig2/LNfc6qjmhPT5gNmJI6nmR8KciKK1gz-uthM8XXrN0la1mXDFFFtclZigmajP3a9xM5sh3Oc_jBh8wneDqT-3Cb-B.jpg?quality=95&crop=0,0,1920,2560&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=eCy05ow62pk9niffRiM0bqukMcJCxNVfOKSAhYtVjDI&cs=1920x0'}
+            ], groupCap:'Вручение дипломов'}
+        ]
+    };
+
+    function renderCarousel(id, items){
+        const wrap = document.getElementById(id);
+        items.forEach(it=>{
+            const n = it.photos.length;
+            const w = n===1 ? 'w-[68vw] max-w-[270px] sm:w-64' : n===2 ? 'w-[84vw] max-w-[440px] sm:w-96' : n===3 ? 'w-[90vw] max-w-[600px] sm:w-[540px]' : 'w-[90vw] max-w-[650px] sm:w-[600px]';
+            const slide = document.createElement('div');
+            slide.className = 'shrink-0 snap-start rounded-2xl p-3 grad-card border border-[var(--border)] '+w;
+            if(it.top){
+                const h = document.createElement('p');
+                h.className = 'text-sm font-semibold mb-2 leading-snug';
+                h.textContent = it.top;
+                slide.appendChild(h);
+            }
+            const grid = document.createElement('div');
+            grid.className = 'grid gap-2 '+(n===1?'grid-cols-1':n===2?'grid-cols-2':'grid-cols-3');
+            it.photos.forEach(p=>{
+                const cell = document.createElement('div');
+                cell.className = 'flex flex-col gap-1';
+                const img = document.createElement('img');
+                img.src = p.src;
+                img.loading = 'lazy';
+                img.alt = p.cap || it.top || 'Фото Анастасии';
+                img.className = 'w-full aspect-[4/5] object-cover rounded-xl cursor-zoom-in hover:scale-[1.03] transition-transform duration-300';
+                img.referrerPolicy = 'no-referrer';
+                img.crossOrigin = 'anonymous';
+                img.addEventListener('click', ()=>openLB(p.src, p.cap || it.groupCap || it.top || ''));
+                cell.appendChild(img);
+                if(p.cap){
+                    const c = document.createElement('p');
+                    c.className = 'text-xs text-[var(--muted)] leading-snug';
+                    c.textContent = p.cap;
+                    cell.appendChild(c);
+                }
+                grid.appendChild(cell);
+            });
+            slide.appendChild(grid);
+            if(it.groupCap){
+                const gc = document.createElement('p');
+                gc.className = 'text-xs text-[var(--muted)] mt-2 leading-snug';
+                gc.textContent = it.groupCap;
+                slide.appendChild(gc);
+            }
+            wrap.appendChild(slide);
+        });
+    }
+
+    function scrollCar(id,dir){ document.getElementById(id).scrollBy({left:dir*300,behavior:'smooth'}); }
+
+    function openLB(src,cap){
+        const lb=document.getElementById('lightbox');
+        document.getElementById('lbImg').src=src;
+        document.getElementById('lbCap').textContent=cap;
+        lb.classList.remove('hidden');
+        requestAnimationFrame(()=>lb.classList.add('show'));
+    }
+    function closeLB(){
+        const lb=document.getElementById('lightbox');
+        lb.classList.remove('show');
+        setTimeout(()=>lb.classList.add('hidden'),250);
+    }
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLB(); });
+
+    function setSec(name){
+        document.getElementById('body').setAttribute('data-sec', name);
+        document.querySelectorAll('.sec-panel').forEach(p=>p.classList.toggle('hidden', p.dataset.sec!==name));
+        document.querySelectorAll('.sec-tab').forEach(b=>b.classList.toggle('active', b.dataset.sec===name));
+    }
+
+    function toggleTheme(){
+        document.documentElement.classList.toggle('dark');
+        const dark = document.documentElement.classList.contains('dark');
+        document.getElementById('themeBtn').innerHTML = dark ? '<i data-feather="moon" class="feather-icon"></i>' : '<i data-feather="sun" class="feather-icon"></i>';
+        feather.replace();
+    }
+
+    const obs = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    renderCarousel('car-terra', DATA.terra);
+    renderCarousel('car-walks', DATA.walks);
+    renderCarousel('car-draw', DATA.draw);
+    renderCarousel('car-pets', DATA.pets);
+    renderCarousel('car-study', DATA.study);
+    setSec('hobbies');
+
+    feather.replace();
+</script>
+</body>
+</html>

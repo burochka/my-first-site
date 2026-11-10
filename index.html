@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Монтаж Анастасии Полубояровой</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Golos+Text:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Анастасия Полубоярова","jobTitle":"Бизнес-аналитик","alumniOf":"МИРЭА","email":"sia.poluboyarova@bk.ru","telephone":"+7 (925) 051-21-92","address":{"@type":"PostalAddress","addressLocality":"Москва"},"knowsLanguage":["ru","en"]}</script>
+<style>
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Раскладка: одна колонка, сверху строгое резюме (для HR и для программ), внизу личное.
+   Навигация одна и всегда на виду. Цвет и игра только в личной части и в мелких акцентах. */
+:root{
+  --bg:#241612; --bg-2:#2F1D18; --fg:#F7EDF0; --muted:#CDB8BC; --line:#4F352E;
+  --pink:#F4B4D0; --blue:#B5D8F6; --lilac:#C9B5F2; --cocoa:#A06A4E; --paper:#FBF6F9; --on-sticker:#2A1812;
+  --accent:#F4B4D0; --accent-2:#B5D8F6;
+  --font-display:'Prata',Georgia,serif; --font-body:'Golos Text',system-ui,sans-serif; --font-hand:'Caveat','Comic Sans MS',cursive;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#E4D3CB; --bg-2:#D7C3B9; --fg:#2B1914; --muted:#5E443D; --line:#B79D92;
+    --accent:#9B2C66; --accent-2:#1F5E94;
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#E4D3CB; --bg-2:#D7C3B9; --fg:#2B1914; --muted:#5E443D; --line:#B79D92;
+  --accent:#9B2C66; --accent-2:#1F5E94;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--fg);font:400 1rem/1.6 var(--font-body);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4,p,ul,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--accent-2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* навигация */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;min-height:52px}
+.nav .who{font:400 1.05rem var(--font-display);white-space:nowrap}
+.nav nav{display:flex;gap:4px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+.nav nav::-webkit-scrollbar{display:none}
+.nav nav a{padding:8px 12px;border-radius:8px;font-size:.92rem;font-weight:500;text-decoration:none;color:var(--muted);white-space:nowrap}
+.nav nav a:hover{color:var(--fg);background:var(--bg-2)}
+.nav nav a.on{color:var(--fg);box-shadow:inset 0 -2px 0 var(--accent)}
+.nav .cta{flex:none}
+.btn{display:inline-flex;align-items:center;font:600 .92rem var(--font-body);padding:10px 18px;border-radius:10px;border:2px solid var(--pink);background:var(--pink);color:var(--on-sticker);text-decoration:none;cursor:pointer;transition:transform .2s}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.btn:hover{transform:translateY(-2px)}
+.nav .btn{padding:7px 14px}
+
+/* первый экран */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:36px;padding-block:44px 28px;align-items:start}
+h1{font:400 clamp(2.4rem,6.4vw,4.4rem)/1 var(--font-display);letter-spacing:-.02em}
+.role{margin-top:14px;font:600 clamp(1.25rem,2.6vw,1.6rem)/1.25 var(--font-body)}
+.role span{display:block;margin-top:4px;font-weight:400;font-size:1rem;color:var(--muted)}
+.lede{margin-top:18px;max-width:62ch;font-size:1.08rem;line-height:1.6}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pol{background:var(--paper);padding:9px 9px 34px;box-shadow:0 14px 30px rgba(0,0,0,.35);color:var(--on-sticker);transform:rotate(3deg);position:relative;margin:6px 0 0;animation:drop .8s both}
+.pol img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.pol figcaption{position:absolute;left:8px;right:8px;bottom:5px;text-align:center;font:700 1.2rem/1 var(--font-hand)}
+.pol::before{content:"";position:absolute;top:-11px;left:50%;width:76px;height:22px;transform:translateX(-50%) rotate(-3deg);background:color-mix(in srgb,var(--pink) 70%,transparent)}
+@keyframes drop{from{opacity:.4;transform:translateY(22px) rotate(0)}to{opacity:1;transform:rotate(3deg)}}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-bottom:44px}
+.fact{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.fact dt{font-size:.82rem;font-weight:600;color:var(--accent);margin-bottom:4px}
+.fact dd{font-size:.95rem;line-height:1.45}
+
+/* секции */
+.band{padding-block:52px;border-top:1px solid var(--line)}
+.band.alt{background:var(--bg-2)}
+h2{font:400 clamp(1.9rem,4.4vw,2.8rem)/1.1 var(--font-display);letter-spacing:-.01em;margin-bottom:8px}
+.sub{max-width:68ch;color:var(--muted);margin-bottom:28px}
+.job{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;margin-bottom:6px}
+.job h3{font:600 1.2rem/1.3 var(--font-body)}
+.job span{color:var(--muted);font-size:.95rem}
+.scope{max-width:72ch;margin-bottom:30px}
+.grp{margin:30px 0 4px;font:400 1.35rem/1.2 var(--font-display);color:var(--accent)}
+.grp:first-of-type{margin-top:0}
+.item{display:grid;grid-template-columns:128px minmax(0,1fr);gap:4px 24px;padding:16px 0;border-top:1px solid var(--line)}
+.item:hover{background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--bg-2) 70%,transparent))}
+.m b{display:block;font:400 1.9rem/1.05 var(--font-display);color:var(--accent-2)}
+.m span{display:block;margin-top:3px;font-size:.78rem;line-height:1.25;color:var(--muted)}
+.item h4{font:600 1.02rem/1.35 var(--font-body);margin-bottom:3px}
+.item p{max-width:74ch;font-size:.97rem;line-height:1.55}
+.also{margin-top:34px;padding-top:20px;border-top:1px solid var(--line)}
+.also h3{font:600 1.05rem var(--font-body);margin-bottom:10px}
+.also ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:8px 36px}
+.also li{position:relative;padding-left:16px;font-size:.95rem}
+.also li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.also a{color:var(--accent-2)}
+
+/* ИИ */
+.ai{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.ai article{background:var(--bg);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:18px 18px 20px}
+.ai article:nth-child(even){border-top-color:var(--accent-2)}
+.ai h3{font:600 1.05rem/1.3 var(--font-body);margin-bottom:6px}
+.ai p{font-size:.94rem;line-height:1.5}
+.verdict{margin-top:22px;max-width:72ch;font-size:1.05rem}
+
+/* навыки */
+.skills{display:grid;gap:0}
+.skills div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:4px 24px;padding:12px 0;border-top:1px solid var(--line)}
+.skills dt{font-weight:600;color:var(--accent-2)}
+.skills dd{font-size:.97rem}
+
+/* образование */
+.edu{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:36px;align-items:start}
+.edu h3{font:400 clamp(1.7rem,3.4vw,2.2rem)/1.15 var(--font-display);color:var(--accent-2);margin-bottom:8px}
+.edu p{max-width:62ch;margin-bottom:10px}
+.edu .pol{transform:rotate(-3deg);animation:none;width:100%;max-width:230px;justify-self:end}
+.edu .pol img{aspect-ratio:4/3;object-position:35% 50%}
+.sci{display:grid;gap:8px;margin:0 0 4px;max-width:62ch}
+.sci li{font-size:.97rem}
+.pf{font-size:.8rem;color:var(--muted);text-underline-offset:3px;white-space:nowrap}
+.pf:hover{color:var(--accent-2)}
+.sev{display:flex;gap:3px;height:8px;max-width:420px;margin-top:12px;border-radius:4px;overflow:hidden}
+.sev-l{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:6px;font-size:.8rem;color:var(--muted)}
+.sev-l i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
+.m b{overflow-wrap:anywhere}
+.prev{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.prev h3{font:600 1.05rem var(--font-body);color:var(--fg);margin-bottom:6px}
+
+/* поиск и контакты */
+.seek{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px 28px;margin-bottom:28px}
+.seek div{border-top:2px solid var(--accent);padding-top:8px}
+.seek dt{font-weight:600;margin-bottom:2px}
+.seek dd{font-size:.95rem;color:var(--muted)}
+.contacts{display:grid;max-width:760px}
+.c{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;padding:12px 0;border-top:1px solid var(--line)}
+.c .lbl{flex:0 0 96px;font-size:.88rem;font-weight:600;color:var(--accent)}
+.c .val{flex:1 1 200px;font:400 clamp(1.15rem,2.6vw,1.5rem)/1.2 var(--font-display);word-break:break-word;text-decoration:none;user-select:all}
+.c .btn{padding:5px 12px;font-size:.82rem}
+
+/* личное */
+.personal{background:var(--bg-2);border-top:1px solid var(--line);padding-block:56px 40px}
+.personal h2{font-size:clamp(2.2rem,6vw,3.6rem)}
+.personal .note{font:700 1.5rem/1.2 var(--font-hand);color:var(--accent);margin-bottom:16px}
+.life{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;margin-bottom:34px}
+.life p{max-width:56ch;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags li{background:var(--lilac);color:var(--on-sticker);padding:4px 13px;border-radius:999px;font-weight:600;font-size:.9rem}
+.reel{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;margin-bottom:8px}
+.reel>.arr{width:42px;height:42px;border-radius:50%;border:2px solid var(--line);background:var(--bg);color:var(--fg);font:600 1.3rem/1 var(--font-body);cursor:pointer;transition:transform .2s,border-color .2s}
+.reel>.arr:hover{border-color:var(--accent);transform:scale(1.06)}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;padding:6px 2px 10px;grid-column:1/-1}
+.strip::-webkit-scrollbar{display:none}
+.frame{flex:0 0 auto;scroll-snap-align:start;margin:0}
+.frame .ph{border:3px solid var(--line);border-radius:6px;overflow:hidden;background:#000}
+.frame img{height:clamp(250px,38vw,320px);width:auto;max-width:none;object-fit:cover}
+.frame figcaption{width:0;min-width:100%;margin-top:6px;font:700 1.15rem/1.05 var(--font-hand);color:var(--accent)}
+.track{position:relative;height:50px;cursor:pointer;touch-action:pan-y}
+.track::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed var(--line)}
+.gecko{position:absolute;left:0;top:3px;width:98px;height:44px;transition:transform .12s linear;touch-action:none;cursor:grab}
+.gecko:active{cursor:grabbing}
+.gecko svg{display:block;width:100%;height:100%;overflow:visible}
+.gecko .body{fill:#E8C3A6}.gecko .spot{fill:#8A5A44}.gecko .leg{stroke:#E8C3A6;stroke-width:5;stroke-linecap:round;fill:none;transform-box:view-box}
+.gecko .tail{fill:#E8C3A6;transform-box:view-box;transform-origin:46px 24px}
+.gecko .eye{fill:#2A1812}
+.gecko.walk .leg{animation:step .28s ease-in-out infinite alternate}
+.gecko.walk .leg.b,.gecko.walk .leg.c{animation-delay:-.28s}
+.gecko.walk .tail{animation:wag .5s ease-in-out infinite alternate}
+@keyframes step{from{transform:rotate(-24deg)}to{transform:rotate(24deg)}}
+@keyframes wag{from{transform:rotate(-9deg)}to{transform:rotate(9deg)}}
+.reelnote{font:700 1.1rem/1.2 var(--font-hand);color:var(--muted);text-align:center}
+footer{padding-block:22px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-block:30px 22px}
+  .hero .pol{width:170px;margin:0 0 0 8px}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .edu,.life{grid-template-columns:1fr}
+  .edu .pol{width:190px;justify-self:start}
+  .nav .who{display:none}
+  .nav .cta{display:none}
+  .skills div{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .item{grid-template-columns:1fr;gap:2px}
+  .m{display:flex;align-items:baseline;gap:8px}
+  .m b{font-size:1.5rem}
+  .m span{margin:0}
+  .facts{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <span class="who">А. Полубоярова</span>
+    <nav id="nav" aria-label="Разделы">
+      <a href="#summary">Кратко</a><a href="#exp">Опыт</a><a href="#ai">Работа с ИИ</a><a href="#skills">Навыки</a><a href="#edu">Образование</a><a href="#contacts">Контакты</a><a href="#life">Личное</a>
+    </nav>
+    <a class="btn cta" href="https://t.me/nika_burochka" target="_blank" rel="noopener">Написать</a>
+  </div>
+</header>
+
+<main>
+<section class="wrap hero" id="summary">
+  <div>
+    <h1>Анастасия Полубоярова</h1>
+    <p class="role">Бизнес-аналитик<span>Бизнес-ассистент собственника, SEO Performance Agency. Москва, готова к удалённому, гибридному и офисному формату.</span></p>
+    <p class="lede">Бизнес-информатик, диплом с отличием. Около полугода работаю рядом с собственником компании и участвую в её процессах на всех уровнях: продажи, договоры, отчётность, запуск продукта, внутренние сервисы. Вижу бизнес изнутри, проверяю данные и документы на достоверность, ставлю задачи ИИ-инструментам и принимаю результат.</p>
+    <div class="hero-cta">
+      <a class="btn" href="https://t.me/nika_burochka" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn ghost" href="#contacts">Все контакты</a>
+    </div>
+  </div>
+  <figure class="pol"><img src="img/p08.jpg" alt="Анастасия Полубоярова"><figcaption>это я</figcaption></figure>
+</section>
+
+<div class="wrap">
+  <dl class="facts" aria-label="Коротко о кандидате">
+    <div class="fact"><dt>Образование</dt><dd>Бизнес-информатика, «Архитектура предприятия», МИРЭА, диплом с отличием, 2026</dd></div>
+    <div class="fact"><dt>Опыт внутри бизнеса</dt><dd>Ассистент собственника агентства, около 6 месяцев, по настоящее время</dd></div>
+    <div class="fact"><dt>Редактура и языки</dt><dd>Редактура и перевод текстов, английский B2. Проверка документов, КП и данных на противоречия</dd></div>
+    <div class="fact"><dt>ИИ-инструменты</dt><dd>Постановка задач, проверка и приёмка результата, автоматизация</dd></div>
+  </dl>
+</div>
+
+<section class="band" id="exp">
+  <div class="wrap">
+    <h2>Опыт</h2>
+    <div class="job">
+      <h3>Бизнес-ассистент собственника, SEO Performance Agency</h3>
+      <span>около 6 месяцев, по настоящее время</span>
+    </div>
+    <p class="scope">Работаю напрямую с собственником и командой: веду проекты и внутренние сервисы, готовлю документы и отчётность, анализирую данные, организую мероприятия. Без официального оформления, подтверждение опыта: контакт HR компании по запросу.</p>
+
+    <h3 class="grp">Анализ данных и контроль качества</h3>
+    <article class="item">
+      <div class="m"><b>301</b><span>проект проверен</span></div>
+      <div><h4>Аудит каталога типовых домов, созданного нейросетью</h4><p>Проверила 530 вариантов планировок и метраж, автоматическими проверками отделила единичные ошибки от системных. Оформила 17 правок в виде ТЗ с критериями приёмки и отчётом «было / стало».</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>164</b><span>запроса сверено</span></div>
+      <div><h4>Сверка данных для коммерческого предложения клинике</h4><p>Сопоставила выгрузки двух сервисов. Первичные данные (все запросы в топ-50) не подтвердились: проверка показала 66. КП и таблица запросов пересчитаны по проверенным данным.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>46</b><span>проектов в сводке</span></div>
+      <div><h4>Еженедельная сводка по партнёрским проектам из CRM</h4><p>Разработала систему приоритетов (5 статусов), собрала Excel из 4 листов. Выявила, что часть «падений» трафика в автоотчётах вызвана сравнением неполного периода с полным.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>18</b><span>расхождений найдено</span></div>
+      <div><h4>Аудит сайтов: языковые версии сайта производителя оборудования</h4><p>Сопоставила немецкую, французскую и итальянскую версии с английской (эталон): шапка, подвал, главная, каталог, карточки товаров, формы. Главный вывод: эталон устарел, в других версиях есть условия доставки и оплаты, контакты и согласие на обработку данных, которых нет в английской. Результат оформлен таблицей с критичностью и резюме для руководителя.</p>
+        <div class="sev" role="img" aria-label="Критичность: высокая 3, средняя 6, низкая 9"><span style="flex:3;background:var(--pink)"></span><span style="flex:6;background:var(--blue)"></span><span style="flex:9;background:var(--lilac)"></span></div>
+        <ul class="sev-l"><li><i style="background:var(--pink)"></i>высокая: 3</li><li><i style="background:var(--blue)"></i>средняя: 6</li><li><i style="background:var(--lilac)"></i>низкая: 9</li></ul></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>~30</b><span>постов проанализировано</span></div>
+      <div><h4>Анализ Telegram-канала руководителя</h4><p>Сравнила посты с низкой реакцией с соседними, выделила 6 общих признаков и 5 гипотез, почему посты не пересылают. Рекомендации по закрепам, тегам, подаче и времени публикации стали материалом для плана работы нового SMM-специалиста.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>935</b><span>площадок проверено</span></div>
+      <div><h4>Аудит площадок для ссылочного профиля компании</h4><p>Задала требования к проверке, организовала перекрёстную верификацию двумя нейросетями. Итог: 31 подходящая площадка, 95 на дополнительную проверку, 809 исключены с указанием причин.</p></div>
+    </article>
+
+    <h3 class="grp">Процессы, документы и автоматизация</h3>
+    <article class="item">
+      <div class="m"><b>Под ключ</b><span>от требований до внедрения</span></div>
+      <div><h4>Печать документов через Telegram-бота для офиса</h4><p>Описала сценарий и ограничения, выбрала решение из нескольких вариантов, организовала тестирование и диагностику, написала инструкцию для сотрудников. Решение собрано на бесплатных компонентах.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>9:00</b><span>каждый будний день</span></div>
+      <div><h4>Ежедневный отчёт из Яндекс.Метрики в Telegram</h4><p>Собрала бота, который присылает руководителю сводку по трём проектам: посетители, визиты, источники, выполнение целей. Отчёт приходит в одном формате, его удобно сравнивать со вчерашним.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>6</b><span>шаблонов договоров</span></div>
+      <div><h4>Единые шаблоны договоров и закрывающих документов</h4><p>Разобрала клиентские договоры, выделила типы услуг и подготовила шаблоны по типам внедрений. Для нового клиента собрала шаблон отчёта и УПД, сверила его с договором и вынесла найденные расхождения на подтверждение.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>26</b><span>недель, 65 действий</span></div>
+      <div><h4>План вывода сервиса компании на рынок</h4><p>Аудит сайта, план по неделям с ролями и сроками, 40 площадок с готовыми текстами, регламент запусков. Работа идёт по плану с 5 октября 2026.</p></div>
+    </article>
+
+    <h3 class="grp">Работа с руководителем, партнёрами и клиентами</h3>
+    <article class="item">
+      <div class="m"><b>20+</b><span>контактов в сутки</span></div>
+      <div><h4>Поиск партнёров в Facebook и LinkedIn</h4><p>Определила критерии отбора, ежедневно собирала не менее 20 контактов в каждой сети и вела реестр: контакт, компания, обоснование, источник. Все отклики передавала руководителю для дальнейших переговоров.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>20+</b><span>персональных предложений</span></div>
+      <div><h4>Отклики на вакансии как канал привлечения клиентов</h4><p>Разработала критерии пригодности вакансий, написала предложения под каждую компанию с учётом её репутационных рисков, заполняла анкеты на зарубежных платформах.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>10</b><span>мероприятий сравнено</span></div>
+      <div><h4>Подбор деловых мероприятий для руководителя</h4><p>Проверила цены и даты по официальным источникам, где данные расходились. Собрала Excel с форматом участия, пользой, целями и контактами для записи.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>Регулярно</b><span>обратная связь по текстам</span></div>
+      <div><h4>Редакторская обратная связь по текстам руководителя</h4><p>Нахожу неконкретные формулировки и результаты без базы для сравнения, например «продажи за 4 месяца» без исходного показателя, и предлагаю, как их уточнить.</p></div>
+    </article>
+    <article class="item">
+      <div class="m"><b>4–5</b><span>точек роста</span></div>
+      <div><h4>Конкурентный анализ нишевого продукта</h4><p>Разобрала модель конкурента по элементам и сопоставила с активами компании. Руководитель получил список практических действий с готовыми следующими шагами.</p></div>
+    </article>
+
+    <div class="also">
+      <h3>Также</h3>
+      <ul>
+        <li>Ревью коммерческих презентаций: 16 замечаний к первой версии, во второй проверила исправление 9 и нашла 10 оставшихся.</li>
+        <li>Рейтинг 90 Telegram-каналов по метрике живой аудитории, проверено более 350.</li>
+        <li>Внутренние новости и каталог инструментов компании в CRM.</li>
+        <li>Коммерческие предложения, счета, договоры с приложениями.</li>
+        <li>Организация выступления руководителя в университете Витте, участие в закупках для тематической ярмарки (<a href="https://t.me/myatov/1428" target="_blank" rel="noopener">пост</a>) и в международном технологическом конгрессе.</li>
+        <li>Видео и соцсети: обложки, монтаж, вертикальные нарезки.</li>
+        <li>Срочные поручения: закупка за 2 часа при лимите 3 часа, организация поездок, бронирование, доставка.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="ai">
+  <div class="wrap">
+    <h2>Работа с ИИ</h2>
+    <p class="sub">ChatGPT, Claude, Claude Code. Использую их как исполнителей: ставлю задачу, задаю критерии, проверяю и принимаю результат.</p>
+    <div class="ai">
+      <article><h3>Ставлю задачи</h3><p>ТЗ и промпты с примерами, критериями приёмки и форматом отчёта «было / стало».</p></article>
+      <article><h3>Проверяю результат</h3><p>Перекрёстная проверка двумя нейросетями, правило «вывод без источника не принимается», замена неподтверждённых данных проверенными.</p></article>
+      <article><h3>Автоматизирую без программиста</h3><p>Telegram-боты для отчётности и печати доведены до рабочего процесса и инструкции для команды.</p></article>
+      <article><h3>Двойной контроль</h3><p>Машинные проверки исключают человеческий фактор, финальную приёмку выполняю сама. Проверка машиной и человеком вместе снижает шанс ошибки.</p></article>
+      <article><h3>Решаю задачи вне профиля</h3><p>Техническая диагностика оборудования, срочный поиск и закупки, подготовка собственных правок и формулировок.</p></article>
+    </div>
+    <p class="verdict">Для работодателя это значит: рутина выполняется быстрее, результат проверен дважды, машиной и человеком, а не принят на веру.</p>
+  </div>
+</section>
+
+<section class="band" id="skills">
+  <div class="wrap">
+    <h2>Навыки</h2>
+    <dl class="skills">
+      <div><dt>Бизнес-анализ</dt><dd>BPMN 2.0 (AS-IS, TO-BE), User Stories, технические задания, опросные листы, прототипирование, RACI, SWOT, PESTEL</dd></div>
+      <div><dt>Экономика ИТ</dt><dd>CAPEX, OPEX, TCO, ROI, срок окупаемости, анализ «что если», метод взвешенных оценок</dd></div>
+      <div><dt>Проекты</dt><dd>Диаграмма Ганта (MS Project), Agile и Scrum, каскадная модель</dd></div>
+      <div><dt>Данные и отчётность</dt><dd>Excel (формулы, условное форматирование, выпадающие списки, диаграммы), Яндекс.Метрика, Keys.so, Topvisor, CRM</dd></div>
+      <div><dt>Документы</dt><dd>Договоры и приложения, КП, счета, УПД, шаблоны, редактура</dd></div>
+      <div><dt>ИИ и автоматизация</dt><dd>ChatGPT, Claude, Claude Code, Telegram-боты</dd></div>
+      <div><dt>Инструменты</dt><dd>Bizagi Modeler, Draw.io, Miro, MS Office, Google Docs, Canva, видеомонтаж</dd></div>
+      <div><dt>Базовый уровень</dt><dd>UML, 1С:Документооборот, AnyLogic</dd></div>
+      <div><dt>Языки</dt><dd>Русский родной, английский B2</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band alt" id="edu">
+  <div class="wrap edu">
+    <div>
+      <h2>Образование</h2>
+      <h3>МИРЭА, бакалавр бизнес-информатики</h3>
+      <p>Профиль «Архитектура предприятия», диплом с отличием, 2022–2026.</p>
+      <p>Дипломный проект: полный цикл от финансовой диагностики компании до экономического обоснования внедрения ИТ-системы.</p>
+      <ul class="sci">
+        <li><b>Публикации:</b> 2 научные статьи по темам автоматизации бизнес-процессов и корпоративной памяти (0,34 а.л.). <a class="pf" href="https://drive.google.com/drive/folders/1B6vidKhMYKFo6eI9pGZN4zxWqme3efkJ?usp=sharing" target="_blank" rel="noopener">подтверждение</a></li>
+        <li><b>Конференция:</b> доклад «Автоматизация и её влияние на бизнес-процессы», «Актуальные вопросы инноватики, менеджмента и бизнес-информатики», МИРЭА, 21.12.2024. <a class="pf" href="https://drive.google.com/drive/folders/1B6vidKhMYKFo6eI9pGZN4zxWqme3efkJ?usp=sharing" target="_blank" rel="noopener">подтверждение</a></li>
+        <li><b>Дополнительное образование:</b> ГБПОУ «Колледж полиции», «Секретарь суда» (120 часов, 2020).</li>
+      </ul>
+      <div class="prev">
+        <h3>Ранее</h3>
+        <p>Менеджер пункта выдачи заказов Wildberries, 3 месяца. Редактура и перевод текстов с английского.</p>
+      </div>
+    </div>
+    <figure class="pol edu-pol"><img src="img/p18d.jpg" alt="Красный диплом и роза на вручении" ><figcaption>вручение диплома</figcaption></figure>
+  </div>
+</section>
+
+<section class="band" id="contacts">
+  <div class="wrap">
+    <h2>Контакты</h2>
+    <dl class="seek">
+      <div><dt>Позиция</dt><dd>Бизнес-аналитик, также бизнес-ассистент</dd></div>
+      <div><dt>Формат</dt><dd>Удалённо, гибрид или офис</dd></div>
+      <div><dt>Город</dt><dd>Москва (Солнцево), готова ездить в любую точку</dd></div>
+      <div><dt>Подтверждение опыта</dt><dd>Контакт HR компании по запросу</dd></div>
+    </dl>
+    <div class="contacts">
+      <div class="c"><span class="lbl">Telegram</span><a class="val" href="https://t.me/nika_burochka" target="_blank" rel="noopener">@nika_burochka</a><button class="btn ghost" type="button" data-copy="@nika_burochka">Скопировать</button></div>
+      <div class="c"><span class="lbl">Телефон</span><span class="val">+7 (925) 051-21-92</span><button class="btn ghost" type="button" data-copy="+7 (925) 051-21-92">Скопировать</button></div>
+      <div class="c"><span class="lbl">Почта</span><span class="val">sia.poluboyarova@bk.ru</span><button class="btn ghost" type="button" data-copy="sia.poluboyarova@bk.ru">Скопировать</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="personal" id="life">
+  <div class="wrap">
+    <p class="note">Рабочая часть закончилась, дальше личное</p>
+    <h2>Выходные кадры</h2>
+    <div class="life">
+      <p>По выходным играю в настольные игры, летом катаюсь на велосипеде по Битцевскому лесу и люблю гулять там, где не ловит связь. Рисую, шью, вышиваю, монтирую, пишу тексты. Раньше делала диджитал-рисунки на заказ.</p>
+      <div>
+        <p>Недавно переехала из Чертаново в Солнцево, снимаю квартиру с друзьями.</p>
+        <p>Дома три эублефара и один бананоед, террариумы для них делаю сама. Четыре кошки временно живут с родителями.</p>
+        <ul class="tags"><li>Настольные игры</li><li>Велосипед и лес</li><li>Рисование</li><li>Рукоделие</li><li>Монтаж</li><li>Писательство</li><li>Террариумистика</li></ul>
+      </div>
+    </div>
+
+    <div class="reel">
+      <button class="arr" type="button" id="prev" aria-label="Назад">‹</button>
+      <div class="track" id="track"><div class="gecko" id="gecko" aria-hidden="true">
+        <svg id="gsvg" viewBox="0 0 120 48">
+          <path class="tail" d="M46 20 C32 20 18 25 2 23 C16 30 32 29 46 28 Z"/>
+          <path class="leg a" style="transform-origin:78px 17px" d="M78 17 L88 6"/>
+          <path class="leg b" style="transform-origin:78px 31px" d="M78 31 L88 42"/>
+          <path class="leg c" style="transform-origin:50px 17px" d="M50 17 L40 6"/>
+          <path class="leg d" style="transform-origin:50px 31px" d="M50 31 L40 42"/>
+          <ellipse class="body" cx="64" cy="24" rx="24" ry="10.5"/>
+          <ellipse class="body" cx="94" cy="24" rx="13" ry="8.5"/>
+          <circle class="spot" cx="56" cy="21" r="2.6"/><circle class="spot" cx="66" cy="27" r="2.8"/><circle class="spot" cx="74" cy="20" r="2.4"/><circle class="spot" cx="48" cy="27" r="2.2"/>
+          <circle class="eye" cx="99" cy="19.5" r="2.2"/><circle class="eye" cx="99" cy="28.5" r="2.2"/>
+        </svg>
+      </div></div>
+      <button class="arr" type="button" id="next" aria-label="Вперёд">›</button>
+      <div class="strip" id="strip" tabindex="0" aria-label="Фото, листать вбок">
+        <figure class="frame"><div class="ph"><img src="img/p07.jpg" width="820" height="1093" alt="Анастасия на улице" loading="lazy"></div><figcaption>На секунду забыла о дедлайнах</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_server.jpg" width="750" height="1000" alt="Серверная: стойка с коммутаторами и проводами" loading="lazy"></div><figcaption>Серверная. Тут я искала роутер для перезагрузки офисного вайфая</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/p12.jpg" width="820" height="1093" alt="Леденцы-планеты для космической ярмарки" loading="lazy"></div><figcaption>Пришли засахаренные леденцы для космической ярмарки, пришлось возвращать и перезаказывать</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/p14.jpg" width="1100" height="825" alt="Кофе и кисель на конгрессе" loading="lazy"></div><figcaption>Международный технологический конгресс (кисель мой)</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/p15.jpg" width="820" height="1093" alt="Пункт выдачи Wildberries" loading="lazy"></div><figcaption>Пункт выдачи Wildberries: здесь я 3 месяца была менеджером</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/p17.jpg" width="1100" height="825" alt="Пункт выдачи с коробками" loading="lazy"></div><figcaption>Коробок всегда больше, чем места</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_halloween.jpg" width="750" height="1000" alt="Компания друзей на хэллоуин" loading="lazy"></div><figcaption>Моя компашка на хэллоуин. Я плесень на хлебе (образ выбран и создан за 7 минут)</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_bus.jpg" width="900" height="675" alt="Две подруги в шубах" loading="lazy"></div><figcaption>Матрица дала сбой, и я села в автобусе рядом с девочкой с похожей шубой</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_scissors.jpg" width="750" height="1000" alt="Витрина с ножницами" loading="lazy"></div><figcaption>Музей ножниц в школе парикмахерского искусства (была моделью)</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_rail.jpg" width="755" height="1000" alt="Заброшенная железная дорога среди зелени" loading="lazy"></div><figcaption>Во время прогулки случайно нашла заброшенную железную дорогу</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_shawarma.jpg" width="750" height="1000" alt="Вход в студию эстетики тела и шаурмичную" loading="lazy"></div><figcaption>Возле новой квартиры один вход в два заведения: студию эстетики тела и шаурмячную</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_cook.jpg" width="750" height="1000" alt="Плита и сковородка" loading="lazy"></div><figcaption>Готовка в новой квартире с минимумом посуды</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_leopard.jpg" width="750" height="1000" alt="Эублефар на камнях" loading="lazy"></div><figcaption>За секунду до укуса</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_banana.jpg" width="750" height="1000" alt="Бананоед в террариуме" loading="lazy"></div><figcaption>Это мой бананоед. У него нет век</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_cat1.jpg" width="750" height="1000" alt="Рыжий кот на кровати" loading="lazy"></div><figcaption>Рыжий демон с помойки</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_cat2.jpg" width="750" height="1000" alt="Рыжий кот у ноутбука" loading="lazy"></div><figcaption>Рыжий демон и отдых</figcaption></figure>
+        <figure class="frame"><div class="ph"><img src="img/l_brauni.jpg" width="750" height="1000" alt="Брауни, чёрная кошка" loading="lazy"></div><figcaption>Моя Брауни. После переезда дерусь за неё с матерью, пока являюсь для неё папой выходного дня</figcaption></figure>
+      </div>
+    </div>
+    <p class="reelnote">Эублефар бежит по плёнке: тяни его или листай кадры</p>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">Анастасия Полубоярова, Москва, 2026</div></footer>
+
+<script>
+(function(){
+  /* подсветка раздела в навигации */
+  var links=[].slice.call(document.querySelectorAll('#nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function mark(){
+    var cur=0; secs.forEach(function(s,i){ if(s && s.getBoundingClientRect().top<window.innerHeight*0.4) cur=i; });
+    links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+    var on=links[cur], nav=document.getElementById('nav');
+    if(on && nav.scrollWidth>nav.clientWidth){ nav.scrollLeft=on.offsetLeft-nav.clientWidth/2+on.offsetWidth/2; }
+  }
+  window.addEventListener('scroll',mark,{passive:true}); window.addEventListener('resize',mark); mark();
+
+  /* копирование контактов */
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy'), label=b.textContent;
+      function done(){b.textContent='Скопировано';setTimeout(function(){b.textContent=label},1800)}
+      function select(){var v=b.parentNode.querySelector('.val'),r=document.createRange(),s=window.getSelection();r.selectNodeContents(v);s.removeAllRanges();s.addRange(r);b.textContent='Выделено, нажмите Ctrl+C';setTimeout(function(){b.textContent=label},2500)}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,select)}else{select()}
+    });
+  });
+
+  /* эублефар вместо полосы прокрутки */
+  var strip=document.getElementById('strip'), track=document.getElementById('track'), gecko=document.getElementById('gecko'), gsvg=document.getElementById('gsvg');
+  var last=0, idle=null, dragging=false;
+  function maxScroll(){return Math.max(0,strip.scrollWidth-strip.clientWidth)}
+  function place(){
+    var m=maxScroll(), p=m>0?strip.scrollLeft/m:0, room=Math.max(0,track.clientWidth-gecko.offsetWidth);
+    gecko.style.transform='translateX('+(p*room)+'px)';
+    var d=strip.scrollLeft-last;
+    if(Math.abs(d)>0.5){ gsvg.style.transform=d<0?'scaleX(-1)':'none'; gecko.classList.add('walk'); clearTimeout(idle); idle=setTimeout(function(){gecko.classList.remove('walk')},180); }
+    last=strip.scrollLeft;
+  }
+  strip.addEventListener('scroll',place,{passive:true}); window.addEventListener('resize',place); place();
+  function step(dir){ strip.scrollBy({left:dir*Math.max(200,strip.clientWidth*0.7),behavior:'smooth'}); }
+  document.getElementById('prev').addEventListener('click',function(){step(-1)});
+  document.getElementById('next').addEventListener('click',function(){step(1)});
+  function toP(x,smooth){
+    var r=track.getBoundingClientRect(), room=Math.max(1,r.width-gecko.offsetWidth);
+    var p=Math.min(1,Math.max(0,(x-r.left-gecko.offsetWidth/2)/room));
+    strip.scrollTo({left:p*maxScroll(),behavior:smooth?'smooth':'auto'});
+  }
+  track.addEventListener('click',function(e){ if(!dragging) toP(e.clientX,true); });
+  gecko.addEventListener('pointerdown',function(e){dragging=true;gecko.setPointerCapture(e.pointerId);e.preventDefault()});
+  gecko.addEventListener('pointermove',function(e){ if(dragging) toP(e.clientX,false); });
+  function end(){ setTimeout(function(){dragging=false},0); }
+  gecko.addEventListener('pointerup',end); gecko.addEventListener('pointercancel',end);
+})();
+</script>
+
+</html>
